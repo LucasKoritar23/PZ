@@ -12,6 +12,13 @@ Quando("preencher todos os dados obrigatorios para geração") do
 	find(:link, "Processos").click
 	find(:id, "ctl00_conteudo_ctl00_cmdIncluir").click
 	select(@sigla, :from => "ctl00$conteudo$TabNavegacao$TabCadastro$ddlSigla")
+	
+	if sigla == "LICAIA - Licenciamento c/ Avaliação de Impacto Ambiental" || sigla == "DAIA - Departamento de Avaliação de Impacto Amb"
+
+	fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codAno", :with => "2018")
+	fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codNumero", :with => @numProcesso)
+	
+	end
 	find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_dpUnidade_BUSCA").click
 	sleep(5)
 	page.switch_to_window page.windows[-1]
