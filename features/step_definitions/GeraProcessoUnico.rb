@@ -3,7 +3,7 @@ Dado("que esteja na tela de cadastro de Processos do Sigam") do
   @Interessado = "OSCAR  SENGER"
   @Municipio = "São Paulo"
   @temporalidade = "001.01.02.009 Processo de cadastramento no Fundo de Garantia por Tempo de Serviço - FGTS"
-  @sigla = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
+  @tipo = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
   @Unidade = "CETESB/IE"
 
 end
@@ -11,14 +11,14 @@ end
 Quando("preencher todos os dados obrigatorios para geração") do
 	find(:link, "Processos").click
 	find(:id, "ctl00_conteudo_ctl00_cmdIncluir").click
-	select(@sigla, :from => "ctl00$conteudo$TabNavegacao$TabCadastro$ddlSigla")
+	select(@tipo, :from => "ctl00$conteudo$TabNavegacao$TabCadastro$ddlSigla")
 	
-	if sigla == "LICAIA - Licenciamento c/ Avaliação de Impacto Ambiental" || sigla == "DAIA - Departamento de Avaliação de Impacto Amb"
+	#if sigla == "LICAIA - Licenciamento c/ Avaliação de Impacto Ambiental" || sigla == "DAIA - Departamento de Avaliação de Impacto Amb"
 
-	fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codAno", :with => "2018")
-	fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codNumero", :with => @numProcesso)
+	#fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codAno", :with => "2018")
+	#fill_in("ctl00$conteudo$TabNavegacao$TabCadastro$codNumero", :with => @numProcesso)
 	
-	end
+	#end
 	find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_dpUnidade_BUSCA").click
 	sleep(5)
 	page.switch_to_window page.windows[-1]
@@ -30,7 +30,7 @@ Quando("preencher todos os dados obrigatorios para geração") do
 	find(:link, @Unidade).click
 	page.switch_to_window page.windows[0]
 	sleep(5)
-	fill_in("ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_Input", :with => "RAS")
+	fill_in("ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_Input", :with => "RAP")
 	sleep(5)
 	#find(:xpath, "//*[@id='ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_item_0']/nobr/table/tbody/tr/td[1]").click
 	find(:xpath, "//table[@id='TabEdita']/tbody/tr[2]/td[2]").click
