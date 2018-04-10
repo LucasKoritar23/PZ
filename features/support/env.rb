@@ -4,7 +4,7 @@ require 'selenium/webdriver'
 require 'selenium-webdriver'
 require 'capybara/dsl'
 require 'pry'
-require 'site_prism'
+#require 'site_prism'
 
 include Capybara::DSL
 
@@ -13,7 +13,7 @@ include Capybara::DSL
 end
 
 Capybara.configure do |config|
-    config.current_driver = :selenium
+    Capybara.current_driver = :selenium
     config.default_max_wait_time = 15
     Capybara.ignore_hidden_elements = false
     Capybara.page.driver.browser.manage.window.maximize

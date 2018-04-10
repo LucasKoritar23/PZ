@@ -3,7 +3,8 @@ Dado("que esteja na tela de cadastro de Processos do Sigam") do
   @Interessado = "OSCAR  SENGER"
   @Municipio = "São Paulo"
   @temporalidade = "001.01.02.009 Processo de cadastramento no Fundo de Garantia por Tempo de Serviço - FGTS"
-  @tipo = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
+  @tipo = "RRA"
+  #@tipo = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
   @Unidade = "CETESB/IE"
 
 end
