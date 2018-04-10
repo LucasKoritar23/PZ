@@ -3,8 +3,8 @@ Dado("que esteja na tela de cadastro de Processos do Sigam") do
   @Interessado = "OSCAR  SENGER"
   @Municipio = "São Paulo"
   @temporalidade = "001.01.02.009 Processo de cadastramento no Fundo de Garantia por Tempo de Serviço - FGTS"
-  @tipo = "RRA"
-  #@tipo = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
+  @atividade = "RRA"
+  @tipo = "IMPACTO - Licenciamento c/ Avaliação de Impacto Ambiental"
   @Unidade = "CETESB/IE"
 
 end
@@ -31,7 +31,7 @@ Quando("preencher todos os dados obrigatorios para geração") do
 	find(:link, @Unidade).click
 	page.switch_to_window page.windows[0]
 	sleep(5)
-	fill_in("ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_Input", :with => "RAP")
+	fill_in("ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_Input", :with => @atividade)
 	sleep(5)
 	#find(:xpath, "//*[@id='ctl00_conteudo_TabNavegacao_TabCadastro_dpCatInicial_txtText_item_0']/nobr/table/tbody/tr/td[1]").click
 	find(:xpath, "//table[@id='TabEdita']/tbody/tr[2]/td[2]").click
