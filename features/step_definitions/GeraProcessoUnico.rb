@@ -53,7 +53,7 @@ Quando("preencher todos os dados obrigatorios para geração") do
 end
 
 Então("o sistema gera o Processo") do
-   PreencheDadosProcesso.PreencheEmpree
+   PreencheDadosProcesso.PreencheAtividade
    @NIS = find(:id, "ctl00_conteudo_capaProcesso_lblNIS").text
 	if  @NIS
 	puts("O NIS do Processo é :" + @NIS)

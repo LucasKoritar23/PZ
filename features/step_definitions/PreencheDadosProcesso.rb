@@ -50,13 +50,16 @@ class PreencheDadosProcesso
 	sigla = ""
 	end
 
-	def PreencheDadosProcesso.PreencheEmpree
+	def PreencheDadosProcesso.PreencheAtividade
   	find(:xpath, "//a[@id='__tab_ctl00_conteudo_TabNavegacao_TabAtividades']/span").click
   	find(:id, "ctl00_conteudo_TabNavegacao_TabAtividades_categoriaProcesso_dgCategorias_ctl02_cmdCategoria").click
-  	fill_in("ctl00_conteudo_TabNavegacao_TBBasico_dadosBasicos_dpEmpreendimento_txtText_Input", :with => "GAFISA")
+	fill_in("ctl00_conteudo_TabNavegacao_TBBasico_dadosBasicos_dpEmpreendimento_txtText_Input", :with => "GAFISA")
   	sleep(5)
   	find(:xpath, "//*[@id='ctl00_conteudo_capaProcesso_trAtividade']/td[1]").click
-  	sleep(5)
+	  sleep(5)
+	  fill_in("ctl00_conteudo_TabNavegacao_TBBasico_dadosBasicos_dpConsultora_txtText_Input", :with => "LPC")
+	  sleep(5)
+	  find(:xpath, "//*[@id='ctl00_conteudo_capaProcesso_trAtividade']/td[1]").click
   	find(:id, "ctl00_conteudo_TabNavegacao_TBBasico_dadosBasicos_cmdAtualiza").click
   	sleep(5)
   	find(:id, "ctl00_conteudo_TabNavegacao_TBBasico_dadosBasicos_cmdFinaliza").click

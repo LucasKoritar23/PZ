@@ -23,7 +23,7 @@ end
 
 Quando("preencher todos os dados obrigatórios") do
   find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_cmdAtualiza").click
-  PreencheDadosProcesso.PreencheEmpree
+  PreencheDadosProcesso.PreencheAtividade
 end
 
 Então("o sistema gera o processo SMA") do
