@@ -2,7 +2,7 @@ class RealizaLogin
 
 	def RealizaLogin.gtiadm
 
-		visit("http://exec-dev01.sma.local/sigam-int-EAmbiente")
+		visit("http://exec-dev01.sma.local/sigam-homologacao1")
 		@usuario = "gtiadm"
 		@senha = "a"
 		find(:xpath, "//*[@id='ctl00_conteudo_ctl00_Panel1']/div").click

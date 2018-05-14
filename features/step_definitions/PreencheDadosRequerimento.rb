@@ -2,7 +2,7 @@ class PreencheDadosRequerimento
 
 def PreencheDadosRequerimento.insereDados(tipo)
 
-  @Unidade = "CETESB/I"
+  @Unidade = "CETESB/IE"
   @Interessado = "OSCAR  SENGER"
   @Municipio = "São Paulo"
   @Req = "REQIMPACTO"

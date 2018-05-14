@@ -8,7 +8,7 @@ end
 
 Então("o sistema gera o processo Impacto") do
   find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_cmdAtualiza").click
-  PreencheDadosProcesso.PreencheEmpree
+  PreencheDadosProcesso.PreencheAtividade
   @NIS = find(:id, "ctl00_conteudo_capaProcesso_lblNIS").text
   if  @NIS
   puts("O NIS do Processo é :" + @NIS)
@@ -41,7 +41,7 @@ end
 
 Quando("preencher todos os campos obrigatórios") do
  find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_cmdAtualiza").click
- PreencheDadosProcesso.PreencheEmpree
+ PreencheDadosProcesso.PreencheAtividade
 end
 
 Então("o sistema gera o processo  DAIA") do
@@ -60,7 +60,7 @@ end
 
 Quando("preencher todos os campos necessários") do
   find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_cmdAtualiza").click
-  PreencheDadosProcesso.PreencheEmpree
+  PreencheDadosProcesso.PreencheAtividade
 end
 
 Então("o sistema gera o processo LICAIA") do
@@ -79,7 +79,7 @@ end
 
 Quando("preencher todos os campos requeridos") do
   find(:id, "ctl00_conteudo_TabNavegacao_TabCadastro_cmdAtualiza").click
-  PreencheDadosProcesso.PreencheEmpree
+  PreencheDadosProcesso.PreencheAtividade
 end
 
 Então("o sistema gera o processo  CETESB") do
